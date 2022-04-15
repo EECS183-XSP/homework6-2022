@@ -40,12 +40,11 @@ document.querySelector("#faster").addEventListener("click", function() {
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log ("Skip Ahead")
 	console.log ("Current position of video:" + video.currentTime)
-	video.currentTime = video.currentTime +15
-	if (video.currentTime >= 67.5) {
-        video.currentTime = 0.0
-	video.play();
-    }
-    console.log("New position of the video is: " + video.currentTime)
+	var time = video.currentTime + 15
+	if(time > video.duration)
+		time = 0;
+	video.currentTime = time
+	console.log("New position of video: " + video.currentTime)
 });
 
 //to mute video// 

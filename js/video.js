@@ -43,6 +43,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime = video.currentTime +15
 	if (video.currentTime >= 67.5) {
         video.currentTime = 0.0
+	video.play();
     }
     console.log("New position of the video is: " + video.currentTime)
 });
